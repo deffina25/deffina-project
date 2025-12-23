@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@sklinet/strapi-plugin-tinymce": "^1.1.7",
-    "@strapi/plugin-cloud": "5.29.0",
+    "@strapi/plugin-cloud": "5.31.3",
     "@strapi/plugin-color-picker": "^5.29.0",
     "@strapi/plugin-documentation": "^5.29.0",
     "@strapi/plugin-users-permissions": "5.29.0",

@@ -2070,13 +2070,13 @@
     qs "6.11.1"
     sift "16.0.1"
 
-"@strapi/plugin-cloud@5.29.0":
-  version "5.29.0"
-  resolved "https://registry.npmjs.org/@strapi/plugin-cloud/-/plugin-cloud-5.29.0.tgz"
-  integrity sha512-S8R+49szJvjNIm5qS7DkJ9UuzwpkLVI2LggMB2Rh+0HllqKCRoqDSQyhW3FQHoucoUztGNC07cTQfItZfbDjbw==
+"@strapi/plugin-cloud@5.31.3":
+  version "5.31.3"
+  resolved "https://registry.npmjs.org/@strapi/plugin-cloud/-/plugin-cloud-5.31.3.tgz"
+  integrity sha512-/DKzx88/FFCHNzjylsgy+6Xgr8XFC20beTOnaHLTVRR6M6E2Mx4jujEjr/E6RvhQYdItwLoCqAp3NND2li0K3Q==
   dependencies:
-    "@strapi/design-system" "2.0.0-rc.30"
-    "@strapi/icons" "2.0.0-rc.30"
+    "@strapi/design-system" "2.0.1"
+    "@strapi/icons" "2.0.1"
     react-intl "6.6.2"
 
 "@strapi/plugin-color-picker@^5.29.0":
@@ -5389,6 +5389,11 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
+
+fsevents@*, fsevents@~2.3.2, fsevents@~2.3.3:
+  version "2.3.3"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
+  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.2:
   version "1.1.2"
