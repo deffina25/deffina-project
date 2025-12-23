@@ -2,7 +2,7 @@
   "name": "deffina-project",
   "private": true,
   "scripts": {
-    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
     "build:all": "npm run build --prefix frontend && npm run build --prefix backend",
     "start": "npm run start --prefix frontend && npm run start --prefix backend"
   }
