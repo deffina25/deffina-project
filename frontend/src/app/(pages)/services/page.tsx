@@ -56,16 +56,10 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
       title: 'Услуги',
       description: 'Наши услуги',
-      robots: {
-        index: true,
-        follow: true,
-      },
-      alternates: {
-        canonical: './',
-      },
     };
   }
 }
+
 type Item = {
   id: number;
   text: string;
