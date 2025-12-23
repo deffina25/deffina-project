@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_cases_page_cases_page_box_2s",
+  "info": {
+    "displayName": "cases-page-box-2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text_url": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "background_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "border_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    }
+  },
+  "config": {}
+}

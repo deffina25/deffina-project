@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_services_page_services_page_box_4_items",
+  "info": {
+    "displayName": "services-page-box-4-item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

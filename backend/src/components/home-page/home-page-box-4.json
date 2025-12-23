@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_home_page_box_4s",
+  "info": {
+    "displayName": "home-page-box-4"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "author": {
+      "type": "string"
+    },
+    "color_icon": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    }
+  },
+  "config": {}
+}

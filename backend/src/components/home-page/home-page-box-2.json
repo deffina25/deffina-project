@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_page_home_page_box_2s",
+  "info": {
+    "displayName": "home-page-box-2"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_page_home_page_box_how_we_work_items",
+  "info": {
+    "displayName": "home-page-box-how-we-work-item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

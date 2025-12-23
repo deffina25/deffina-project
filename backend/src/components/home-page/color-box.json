@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_home_page_color_boxes",
+  "info": {
+    "displayName": "color_box"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "title_btn": {
+      "type": "string"
+    },
+    "url_btn": {
+      "type": "string"
+    },
+    "background_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "border_color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "background_color_visible": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    }
+  },
+  "config": {}
+}

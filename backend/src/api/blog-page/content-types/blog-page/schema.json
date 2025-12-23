@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_pages",
+  "info": {
+    "singularName": "blog-page",
+    "pluralName": "blog-pages",
+    "displayName": "Blog-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "blog_item": {
+      "type": "component",
+      "component": "blog-page.blog-page",
+      "repeatable": false
+    },
+    "title_page": {
+      "type": "component",
+      "component": "cases-page.cases-page-title",
+      "repeatable": false
+    },
+    "image_page_1": {
+      "type": "component",
+      "component": "cases-page.cases-page-image",
+      "repeatable": false
+    },
+    "text_page_1": {
+      "type": "string"
+    },
+    "text_page_2": {
+      "type": "component",
+      "component": "cases-page.cases-page-text",
+      "repeatable": false
+    },
+    "image_page_2": {
+      "type": "component",
+      "component": "cases-page.cases-page-image",
+      "repeatable": false
+    },
+    "text_page_3": {
+      "type": "component",
+      "component": "cases-page.cases-page-text",
+      "repeatable": false
+    },
+    "box_2_page": {
+      "type": "component",
+      "component": "cases-page.cases-page-box-2",
+      "repeatable": false
+    },
+    "text_page_4": {
+      "type": "component",
+      "component": "cases-page.cases-page-text",
+      "repeatable": false
+    },
+    "image_page_3": {
+      "type": "component",
+      "component": "cases-page.cases-page-image",
+      "repeatable": false
+    },
+    "text_page_5": {
+      "type": "component",
+      "component": "cases-page.cases-page-text",
+      "repeatable": true
+    },
+    "box_item": {
+      "type": "component",
+      "component": "blog-page.blog-page-box-1",
+      "repeatable": false
+    }
+  }
+}

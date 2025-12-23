@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_cases_page_cases_page_box_3s",
+  "info": {
+    "displayName": "cases-page-box-3"
+  },
+  "options": {},
+  "attributes": {
+    "client_say": {
+      "type": "component",
+      "component": "module-client-say.client-say",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_services_page_services_page_box_2_items",
+  "info": {
+    "displayName": "Services-page-box-2-item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "title_icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "title_stack": {
+      "type": "string"
+    },
+    "stack": {
+      "type": "component",
+      "component": "services-page.services-page-box-2-item-stack",
+      "repeatable": true
+    },
+    "title_link": {
+      "type": "string"
+    },
+    "url_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

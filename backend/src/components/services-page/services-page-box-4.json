@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_services_page_services_page_box_4s",
+  "info": {
+    "displayName": "services-page-box-4"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "component",
+      "component": "services-page.services-page-box-4-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

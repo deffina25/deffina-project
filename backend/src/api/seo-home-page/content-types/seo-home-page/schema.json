@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "seo_home_pages",
+  "info": {
+    "singularName": "seo-home-page",
+    "pluralName": "seo-home-pages",
+    "displayName": "Seo-home-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home_seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "blog_home_seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "case_studies_home_seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "privacy_policy_home_seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "services_home_seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    }
+  }
+}

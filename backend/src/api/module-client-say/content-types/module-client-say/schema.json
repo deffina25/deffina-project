@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "module_client_says",
+  "info": {
+    "singularName": "module-client-say",
+    "pluralName": "module-client-says",
+    "displayName": "module-client-say"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_say": {
+      "type": "component",
+      "component": "cases-page.cases-page-box-3",
+      "repeatable": true
+    }
+  }
+}

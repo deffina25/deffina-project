@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "cases_page_banners",
+  "info": {
+    "singularName": "cases-page-banner",
+    "pluralName": "cases-page-banners",
+    "displayName": "Cases-page-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "case_page_banner": {
+      "type": "component",
+      "component": "cases-page.cases-page-banner",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_cases_page_cases_page_items",
+  "info": {
+    "displayName": "cases-item"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce",
+      "required": false
+    }
+  },
+  "config": {}
+}

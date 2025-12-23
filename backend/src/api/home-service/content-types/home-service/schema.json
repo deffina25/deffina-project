@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_services",
+  "info": {
+    "singularName": "home-service",
+    "pluralName": "home-services",
+    "displayName": "Service-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "cases-page.cases-page-banner",
+      "repeatable": false
+    },
+    "box_1": {
+      "type": "component",
+      "component": "services-page.services-page",
+      "repeatable": false
+    },
+    "box_2": {
+      "type": "component",
+      "component": "services-page.services-page-box-2",
+      "repeatable": true
+    },
+    "box_3": {
+      "type": "component",
+      "component": "services-page.services-page-box-3",
+      "repeatable": false
+    },
+    "box_4": {
+      "type": "component",
+      "component": "services-page.services-page-box-4",
+      "repeatable": false
+    },
+    "box_5": {
+      "type": "component",
+      "component": "home-page.color-box",
+      "repeatable": false
+    }
+  }
+}

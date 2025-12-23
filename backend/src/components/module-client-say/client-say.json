@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_module_client_say_client_says",
+  "info": {
+    "displayName": "client-say"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "addition": {
+      "type": "string"
+    },
+    "color_addition": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    }
+  },
+  "config": {}
+}

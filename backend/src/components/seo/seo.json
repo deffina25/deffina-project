@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "seo"
+  },
+  "options": {},
+  "attributes": {
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    },
+    "meta_canonical": {
+      "type": "string",
+      "default": "./"
+    },
+    "meta_index": {
+      "type": "boolean",
+      "default": true
+    },
+    "meta_follow": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "config": {}
+}

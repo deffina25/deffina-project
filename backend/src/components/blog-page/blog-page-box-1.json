@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_page_blog_page_box_1s",
+  "info": {
+    "displayName": "blog-page-box-1",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blog_item": {
+      "type": "component",
+      "component": "blog-page.blog-page-box-1-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

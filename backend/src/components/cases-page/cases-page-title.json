@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cases_page_cases_page_titles",
+  "info": {
+    "displayName": "cases-page-title"
+  },
+  "options": {},
+  "attributes": {
+    "path": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

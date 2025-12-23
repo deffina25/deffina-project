@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_services_page_services_page_box_2s",
+  "info": {
+    "displayName": "Services-page-box-2"
+  },
+  "options": {},
+  "attributes": {
+    "left_title": {
+      "type": "string"
+    },
+    "left_text": {
+      "type": "richtext"
+    },
+    "item": {
+      "type": "component",
+      "component": "services-page.services-page-box-2-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

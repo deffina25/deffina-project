@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "running_lines",
+  "info": {
+    "singularName": "running-line",
+    "pluralName": "running-lines",
+    "displayName": "Running-line"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "running_line": {
+      "type": "component",
+      "component": "running-line.running-line",
+      "repeatable": false
+    }
+  }
+}

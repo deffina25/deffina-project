@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_cases_page_cases_page_box_1s",
+  "info": {
+    "displayName": "cases-page-box-1"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "box_1_item": {
+      "type": "component",
+      "component": "cases-page.cases-page-box-1-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

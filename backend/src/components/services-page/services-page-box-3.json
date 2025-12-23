@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_services_page_services_page_box_3s",
+  "info": {
+    "displayName": "services-page-box-3"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    },
+    "title_list": {
+      "type": "string"
+    },
+    "item": {
+      "type": "component",
+      "component": "services-page.services-page-box-2-item-stack",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

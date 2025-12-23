@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cases_page_cases_page_box_1_items",
+  "info": {
+    "displayName": "cases-page-box-1-item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

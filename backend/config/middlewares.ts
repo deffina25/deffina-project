@@ -1,0 +1,55 @@
+export default [
+  'strapi::logger',
+  'strapi::errors',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "script-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "https:"],
+          "connect-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "blob:", "*.strapi.io"],
+          "img-src": [
+            "'self'",
+            "*.tinymce.com",
+            "*.tiny.cloud",
+            "data:",
+            "blob:",
+            "dl.airtable.com",
+            "strapi.io",
+            "s3.amazonaws.com",
+            "cdn.jsdelivr.net",
+          ],
+          "style-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "*.tinymce.com",
+            "*.tiny.cloud",
+          ],
+          "font-src": ["'self'", "*.tinymce.com", "*.tiny.cloud"],
+        },
+        upgradeInsecureRequests: null,
+      },
+    },
+  },
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:5173',
+        'https://deffina.online',
+        'http://deffina.online',
+        'https://deffina-backend-ntgg.onrender.com',
+      ],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      keepHeadersOnError: true,
+    }
+  },
+  'strapi::poweredBy',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
+];

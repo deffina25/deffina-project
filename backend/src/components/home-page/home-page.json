@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_page_home_pages",
+  "info": {
+    "displayName": "home-page-box-1"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "title_btn": {
+      "type": "string"
+    },
+    "url_btn": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

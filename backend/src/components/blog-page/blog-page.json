@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blog_page_blog_pages",
+  "info": {
+    "displayName": "blog-page-item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    }
+  },
+  "config": {}
+}

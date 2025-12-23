@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_services_page_services_page_box_2_item_stacks",
+  "info": {
+    "displayName": "services-page-box-2-item-stack"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

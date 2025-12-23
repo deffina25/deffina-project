@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_services_page_services_pages",
+  "info": {
+    "displayName": "services-page-box-1"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
+    }
+  },
+  "config": {}
+}
