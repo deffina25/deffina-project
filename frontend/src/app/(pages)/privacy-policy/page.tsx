@@ -5,37 +5,63 @@ import { ErrorPage } from '@/app/components/error-page';
 import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/seo-home-page`,
-    {
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    if (!apiUrl) {
+      console.error('NEXT_PUBLIC_API_URL is not defined');
+      return {
+        title: 'Политика конфиденциальности',
+        description: 'Политика конфиденциальности',
+      };
+    }
+
+    const res = await axios.get(`${apiUrl}/api/seo-home-page`, {
       params: {
         populate: {
           privacy_policy_home_seo: { populate: '*' },
         },
       },
-    },
-  );
+    });
 
-  const seo = res.data?.data?.privacy_policy_home_seo || {};
-  const {
-    meta_title = '',
-    meta_description = '',
-    meta_canonical = './',
-    meta_index = false,
-    meta_follow = false,
-  } = seo;
+    const seo = res.data?.data?.privacy_policy_home_seo || {};
 
-  return {
-    title: meta_title,
-    description: meta_description,
-    robots: {
-      index: meta_index,
-      follow: meta_follow,
-    },
-    alternates: {
-      canonical: meta_canonical,
-    },
-  };
+    const {
+      meta_title = '',
+      meta_description = '',
+      meta_canonical = './',
+      meta_index = false,
+      meta_follow = false,
+    } = seo;
+
+    return {
+      title: meta_title || 'Политика конфиденциальности',
+      description: meta_description || 'Политика конфиденциальности',
+      robots: {
+        index: meta_index,
+        follow: meta_follow,
+      },
+      alternates: {
+        canonical: meta_canonical,
+      },
+    };
+  } catch (error) {
+    console.error(
+      'Ошибка генерации метаданных для политики конфиденциальности:',
+      error,
+    );
+    return {
+      title: 'Политика конфиденциальности',
+      description: 'Политика конфиденциальности',
+      robots: {
+        index: true,
+        follow: true,
+      },
+      alternates: {
+        canonical: './',
+      },
+    };
+  }
 }
 
 const Page = async () => {

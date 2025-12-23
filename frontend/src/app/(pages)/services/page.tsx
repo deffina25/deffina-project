@@ -11,39 +11,61 @@ import axios from 'axios';
 import { hexToRgb } from '@/app/function/hexToRgb';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/seo-home-page`,
-    {
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    if (!apiUrl) {
+      console.error('NEXT_PUBLIC_API_URL is not defined');
+      return {
+        title: 'Услуги',
+        description: 'Наши услуги',
+      };
+    }
+
+    const res = await axios.get(`${apiUrl}/api/seo-home-page`, {
       params: {
         populate: {
           services_home_seo: { populate: '*' },
         },
       },
-    },
-  );
+    });
 
-  const seo = res.data?.data?.services_home_seo || {};
-  const {
-    meta_title = '',
-    meta_description = '',
-    meta_canonical = './',
-    meta_index = false,
-    meta_follow = false,
-  } = seo;
+    const seo = res.data?.data?.services_home_seo || {};
 
-  return {
-    title: meta_title,
-    description: meta_description,
-    robots: {
-      index: meta_index,
-      follow: meta_follow,
-    },
-    alternates: {
-      canonical: meta_canonical,
-    },
-  };
+    const {
+      meta_title = '',
+      meta_description = '',
+      meta_canonical = './',
+      meta_index = false,
+      meta_follow = false,
+    } = seo;
+
+    return {
+      title: meta_title || 'Услуги',
+      description: meta_description || 'Наши услуги',
+      robots: {
+        index: meta_index,
+        follow: meta_follow,
+      },
+      alternates: {
+        canonical: meta_canonical,
+      },
+    };
+  } catch (error) {
+    console.error('Ошибка генерации метаданных для услуг:', error);
+    return {
+      title: 'Услуги',
+      description: 'Наши услуги',
+      robots: {
+        index: true,
+        follow: true,
+      },
+      alternates: {
+        canonical: './',
+      },
+    };
+  }
 }
-
 type Item = {
   id: number;
   text: string;

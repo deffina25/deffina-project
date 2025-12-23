@@ -6,24 +6,33 @@ import { Metadata } from 'next';
 import { Props } from '@/app/types/global-types';
 
 export async function generateStaticParams() {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/cases-pages`,
-    {
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    if (!apiUrl) {
+      console.error('NEXT_PUBLIC_API_URL is not defined');
+      return [];
+    }
+
+    const res = await axios.get(`${apiUrl}/api/cases-pages`, {
       params: {
         populate: '*',
         sort: 'createdAt:desc',
       },
-    },
-  );
+    });
 
-  const pages = res?.data?.data;
-  if (!pages || pages.length === 0) {
+    const pages = res?.data?.data;
+    if (!pages || pages.length === 0) {
+      return [];
+    }
+
+    return pages.map(({ documentId }: { documentId: string }) => ({
+      documentId,
+    }));
+  } catch (error) {
+    console.error('Error in generateStaticParams:', error);
     return [];
   }
-
-  return pages.map(({ documentId }: { documentId: string }) => ({
-    documentId,
-  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -31,42 +40,50 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!id) {
     return {
-      title: 'Blog article',
+      title: 'Кейс',
     };
   }
 
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/cases-pages/${id}`,
-    {
-      params: {
-        populate: {
-          seo: { populate: '*' },
+  try {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/cases-pages/${id}`,
+      {
+        params: {
+          populate: {
+            seo: { populate: '*' },
+          },
         },
       },
-    },
-  );
+    );
 
-  const seo = res.data?.data?.seo || {};
+    const seo = res.data?.data?.seo || {};
 
-  const {
-    meta_title = '',
-    meta_description = '',
-    meta_canonical = './',
-    meta_index = false,
-    meta_follow = false,
-  } = seo;
+    const {
+      meta_title = '',
+      meta_description = '',
+      meta_canonical = './',
+      meta_index = false,
+      meta_follow = false,
+    } = seo;
 
-  return {
-    title: meta_title,
-    description: meta_description,
-    robots: {
-      index: meta_index,
-      follow: meta_follow,
-    },
-    alternates: {
-      canonical: meta_canonical,
-    },
-  };
+    return {
+      title: meta_title || 'Кейс',
+      description: meta_description,
+      robots: {
+        index: meta_index,
+        follow: meta_follow,
+      },
+      alternates: {
+        canonical: meta_canonical,
+      },
+    };
+  } catch (error) {
+    console.error('Ошибка генерации метаданных:', error);
+    return {
+      title: 'Кейс',
+      description: 'Изучите наш кейс',
+    };
+  }
 }
 
 export default async function Page({ params }: Props) {
